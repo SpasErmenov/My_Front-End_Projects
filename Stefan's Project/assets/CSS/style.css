@@ -1,0 +1,101 @@
+
+@font-face {
+    font-family: lobster;
+    src: url('lobster_[allfont.net].ttf');
+}
+
+@font-face {
+    font-family: arina;
+    src: url('Arina.ttf');
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+    'header header header'
+    'menu content content'
+    'menu content content'
+    'menu content content'
+    'footer footer footer';
+}
+
+header {
+    grid-area: header;
+}
+
+footer {
+    grid-area: footer;
+}
+
+header, footer {
+    background-color: #003c00;
+    font-family: arina;    
+}
+
+h1, h2 {
+    font-size: 45px;
+    color: greenyellow;
+    margin: 0;
+    padding: 25px;
+    text-align: center;
+}
+
+nav {
+    background: #EBFFCE;
+    width: 200px;
+    grid-area: menu;
+    display: grid;
+}
+
+a {
+   text-decoration: none;
+   font-style: italic; 
+   padding: 50% 10px 50% 10px;
+   align-items: center;
+   color:black;
+   font-size: 2em;
+   font-family: lobster;
+   text-shadow: 2px 2px 5px green;
+}
+
+p {
+    font-size: 27px;
+}
+
+section, .div-flex {
+    display: flex;
+}
+
+section > div {
+    grid-area: content;
+    
+}
+
+.some-padding {
+    padding: 40px;
+}
+
+img {
+    object-fit: cover;
+}
+
+
+a:hover {
+  color: brown;
+}
+
+
+a:active {
+  color: grey;
+}
+
+@media screen and (max-width:720px){
+	body{
+		grid-template-areas: "header"
+				     "menu"
+				     "contents"
+				     "sidebar"
+				     "footer"
+	}
+}
